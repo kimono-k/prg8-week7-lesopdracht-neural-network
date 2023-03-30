@@ -4,8 +4,12 @@ const nn = ml5.neuralNetwork({ task: "regression", debug: true });
 
 // Domme elementen
 const predictButton = document.getElementById("btn");
+const inputField = document.getElementById("field");
 const inputFieldValue = document.getElementById("field").value;
 const resultDiv = document.getElementById("result");
+
+inputField.style.display = "none";
+predictButton.style.display = "none";
 
 // Event listener
 predictButton.addEventListener("click", (e) => {
@@ -63,6 +67,8 @@ async function finishedTraining() {
   }
   updateChart("Predictions", predictions);
   console.log("Finished training!");
+  inputField.style.display = "inline";
+  predictButton.style.display = "inline";
 }
 // 3 - Doen van een voorspelling
 async function makePrediction(value) {
