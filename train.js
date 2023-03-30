@@ -8,6 +8,7 @@ const inputField = document.getElementById("field");
 const inputFieldValue = document.getElementById("field").value;
 const resultDiv = document.getElementById("result");
 
+// Initial hiding for elements
 inputField.style.display = "none";
 predictButton.style.display = "none";
 
