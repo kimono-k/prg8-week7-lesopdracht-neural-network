@@ -5,7 +5,6 @@ const nn = ml5.neuralNetwork({ task: "regression", debug: true });
 // Domme elementen
 const predictButton = document.getElementById("btn");
 const inputField = document.getElementById("field");
-const inputFieldValue = document.getElementById("field").value;
 const resultDiv = document.getElementById("result");
 
 // Initial hiding for elements
@@ -15,6 +14,7 @@ predictButton.style.display = "none";
 // Event listener
 predictButton.addEventListener("click", (e) => {
   e.preventDefault();
+  let inputFieldValue = document.getElementById("field").value;
   makePrediction(+inputFieldValue);
 });
 
