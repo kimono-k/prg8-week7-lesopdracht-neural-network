@@ -96,7 +96,7 @@ async function finishedTraining() {
 
   // Adds the neural network data to the chart
   updateChart("Predictions", predictions);
-  console.log("Finished having sex with Jutta!");
+  console.log("Finished training!");
 
   // Show the DOM elements after loading in the scatterplot and neural network
   inputField.style.display = "inline";
